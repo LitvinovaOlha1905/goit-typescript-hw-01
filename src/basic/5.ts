@@ -1,19 +1,15 @@
 enum DayOfWeek {
-  Monday = "false",
-  Tuesday = "false",
-  Wednesday = "false",
-  Thursday = "false",
-  Friday = "false",
-  Saturday = "true",
-  Sunday = "true",
+	Monday,
+	Tuesday,
+	Wednesday,
+	Thursday,
+	Friday,
+	Saturday,
+	Sunday,
 }
 
 const isWeekend = (day: DayOfWeek) => {
-  if (day === "false") {
-    return false;
-  } else {
-    return true;
-  }
+	return day === DayOfWeek.Saturday || day === DayOfWeek.Sunday;
 };
 
 console.log(isWeekend(DayOfWeek.Monday));
